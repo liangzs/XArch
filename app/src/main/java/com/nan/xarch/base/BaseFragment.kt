@@ -15,7 +15,8 @@ import io.reactivex.disposables.Disposable
 /**
  * Fragment基类
  */
-abstract class BaseFragment<T : ViewBinding>(val inflater: (inflater: LayoutInflater, container: ViewGroup?, attachToRoot: Boolean) -> T) : Fragment(), IGetPageName {
+abstract class BaseFragment<T : ViewBinding>(val inflater: (inflater: LayoutInflater, container: ViewGroup?, attachToRoot: Boolean) -> T) :
+    Fragment(), IGetPageName {
 
     protected lateinit var viewBinding: T
     private val compositeDisposable = CompositeDisposable()
@@ -27,7 +28,11 @@ abstract class BaseFragment<T : ViewBinding>(val inflater: (inflater: LayoutInfl
     }
 
     @CallSuper
-    override fun onCreateView(inflater: LayoutInflater, container: ViewGroup?, savedInstanceState: Bundle?): View? {
+    override fun onCreateView(
+        inflater: LayoutInflater,
+        container: ViewGroup?,
+        savedInstanceState: Bundle?
+    ): View? {
         viewBinding = this.inflater(inflater, container, false)
         return viewBinding.root
     }

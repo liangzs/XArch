@@ -55,7 +55,7 @@ class MainActivity : BaseActivity<ActivityMainBinding>(ActivityMainBinding::infl
     }
 
     /**
-     * 初始化底栏
+     * 初始化底栏dfd😊表情biao q
      */
     private fun initTabs() {
         val tabs = listOf(

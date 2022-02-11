@@ -1,6 +1,5 @@
 package com.nan.xarch.module.home
-
-import androidx.lifecycle.viewModelScope
+ import androidx.lifecycle.viewModelScope
 import com.nan.xarch.base.list.base.BaseRecyclerViewModel
 import com.nan.xarch.base.list.base.BaseViewData
 import com.nan.xarch.bean.BannerBean
